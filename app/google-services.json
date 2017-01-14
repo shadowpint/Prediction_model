@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "701512683044",
+    "firebase_url": "https://predictor-b6f6e.firebaseio.com",
+    "project_id": "predictor-b6f6e",
+    "storage_bucket": "predictor-b6f6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701512683044:android:fd8cb779c11e2782",
+        "android_client_info": {
+          "package_name": "com.examenigma.ai.suggest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701512683044-isl2nmiraj31mi5q3p1qf0vf5dn0v2m3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwOOfkaLlHZ_ut4WT18zb5YFUhHPrC4Xk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
