@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     EditText coincome;
     EditText loanamount;
     EditText loanterm;
-    RadioGroup credit;
+    EditText credit;
     private RadioButton creditButton;
     RadioGroup property;
     private RadioButton propertyButton;
@@ -113,8 +113,8 @@ TextView respon;
         loanterm = (EditText) findViewById(R.id.loan_amount_term);
 sloanterm=loanterm.getText().toString();
         predict = (Button) findViewById(R.id.Predict);
-        credit = (RadioGroup) findViewById(R.id.credit_history);
-        creditButton = (RadioButton) findViewById(credit.getCheckedRadioButtonId());
+        credit =  (EditText) findViewById(R.id.credit);
+
 
         property= (RadioGroup) findViewById(R.id.property);
         propertyButton = (RadioButton) findViewById(property.getCheckedRadioButtonId());
@@ -131,12 +131,9 @@ sloanterm=loanterm.getText().toString();
                 semployed=employedButton.getText().toString();
                 sincome=income.getText().toString();
                 sloanamount=loanamount.getText().toString();
-                if(creditButton.getText().toString().equals("Yes")) {
-                    scredit = "1";
-                }
-                else {
-                    scredit = "0";
-                }
+                scredit =credit.getText().toString();
+
+
                 sproperty=propertyButton.getText().toString();
                 JSONObject Inputs = new JSONObject();
                 JSONObject GlobalParameters = new JSONObject();
@@ -260,7 +257,7 @@ sloanterm=loanterm.getText().toString();
 
 
             try {
-                respon.setText(json.getJSONObject("Results").getJSONObject("output1").getJSONObject("value").getJSONArray("Values").getJSONArray(0).toString());
+                respon.setText(json.getJSONObject("Results").getJSONObject("output1").getJSONObject("value").getJSONArray("Values").getJSONArray(0).optString(6));
             } catch (JSONException e) {
                 e.printStackTrace();
             }

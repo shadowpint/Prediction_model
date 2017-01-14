@@ -70,4 +70,5 @@
     <string name="stop_updates">Stop updates</string>
     <string name="location_updated_message">Location updated</string>
     <string name="location">location</string>
+    <string name="credit">credit 0/1</string>
 </resources>

@@ -281,36 +281,18 @@
         android:textColor="@color/input_register"
         android:textColorHint="@color/input_register_hint" />
 
-    <RadioGroup
-        android:id="@+id/credit_history"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/credit"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:background="@color/input_register_bg"
-        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/credit"
         android:inputType="textCapWords"
         android:padding="10dp"
         android:singleLine="true"
         android:textColor="@color/input_register"
-        android:textColorHint="@color/input_register_hint">
-
-        <RadioButton
-            android:id="@+id/no_credit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/no"
-            android:checked="true" />
-
-        <RadioButton
-            android:id="@+id/credit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/yes" />
-
-
-
-
-    </RadioGroup>
+        android:textColorHint="@color/input_register_hint"/>
 
     <TextView
         android:id="@+id/propertytext"
