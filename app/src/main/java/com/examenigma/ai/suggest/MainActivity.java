@@ -85,6 +85,8 @@ TextView respon;
     private String scredit;
     private String sproperty;
     JSONObject json = new JSONObject();
+    private String rs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -210,8 +212,8 @@ sloanterm=loanterm.getText().toString();
              * Progress Dialog for User Interaction
              */
             dialog = new ProgressDialog(MainActivity.this);
-            dialog.setTitle("Hey Wait Please...");
-            dialog.setMessage("I am getting your JSON");
+            dialog.setTitle("Please wait...");
+            dialog.setMessage("Predicting");
             dialog.show();
         }
 
@@ -257,10 +259,15 @@ sloanterm=loanterm.getText().toString();
 
 
             try {
-                respon.setText(json.getJSONObject("Results").getJSONObject("output1").getJSONObject("value").getJSONArray("Values").getJSONArray(0).optString(6));
+                rs=json.getJSONObject("Results").getJSONObject("output1").getJSONObject("value").getJSONArray("Values").getJSONArray(0).optString(6);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
+            if(rs.equals("Y")) {
+                respon.setText("Loan Given");
+            }else
+                respon.setText("Loan not given");
 
 
         }
